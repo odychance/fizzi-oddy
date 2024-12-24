@@ -2,7 +2,7 @@
 
 import { Bounded } from "@/components/Bounded";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { asText } from "@prismicio/client";
 import { View } from "@react-three/drei";
 import { Scene } from "./Scene";
@@ -42,7 +42,7 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
                   {item.heading?.map(item => item.text)}
                 </h2>
                 <div className="mt-4 text-xl">
-                  {item.body?.map(item => item.text)}
+                  <PrismicRichText field={item.body} />
                 </div>
               </div>
             </div>
