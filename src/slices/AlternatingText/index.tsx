@@ -30,11 +30,9 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
     >
       <div>
         <div className="grid z-[100] relative">
-          {/* {isDesktop && ( */}
-            <View className="alternating-text-view absolute left-0 top-0 h-screen w-full">
-              <Scene />
-            </View>
-           {/* )}  */}
+          <View className="alternating-text-view absolute left-0 top-0 h-screen w-full">
+            <Scene />
+          </View>
           {slice.primary.textgroup.map((item, index) => (
             <div key={asText(item.heading)} className="alternating-section grid h-screen place-items-center gap-x-12 md:grid-cols-2">
               <div className={clsx(index % 2 == 0 ? "col-start-1" : "md:col-start-2", "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30")}>

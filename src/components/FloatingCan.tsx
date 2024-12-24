@@ -24,20 +24,21 @@ const FloatingCan = forwardRef<Group, FloatingCanProps>(
     children,
     ...props
   }, ref) => {
-  return (
-    <group ref={ref} {...props}>
+    return (
+      <group ref={ref} {...props}>
         <Float
           speed={floatSpeed}
           rotationIntensity={rotationIntensity}
           floatIntensity={floatIntensity}
           floatingRange={floatingRange}
         >
-            {children}
-            <SodaCan flavor={flavor}/>
+          {children}
+          <SodaCan flavor={flavor}/>
         </Float>
-    </group>
-  )
-})
+      </group>
+    )
+  }
+)
 
 FloatingCan.displayName = "FloatingCan"
 
